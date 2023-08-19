@@ -12,10 +12,9 @@
 # below:
 .git
 .gitignore
-.env
 
 # Node.js dependencies:
 node_modules/
-src/*
-test/*
+src/
+test/
 README.md
