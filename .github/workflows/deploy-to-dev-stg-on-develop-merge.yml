@@ -25,6 +25,7 @@ jobs:
         with:
           flags: --no-cache
           deliverables: '../app.yaml'
+          working_directory: ../
           env_vars: |-
             DB_NAME=${{ secrets.DEV_STG_DB_NAME }}
             DB_PASS=${{ secrets.DEV_STG_DB_PASS }}
