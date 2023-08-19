@@ -12,7 +12,7 @@ jobs:
     steps:
       - id: 'checkout'
         name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - id: 'auth'
         name: 'Authenticate To Google Cloud'
         uses: 'google-github-actions/auth@v1'
@@ -23,7 +23,7 @@ jobs:
         name: 'Deploy To Google Cloud App Engine'
         uses: 'google-github-actions/deploy-appengine@v1'
         with:
-          deliverables: '../src/app.yaml'
+          deliverables: './app.yml'
           env_vars: |-
             DB_NAME=${{ secrets.DEV_STG_DB_NAME }}
             DB_PASS=${{ secrets.DEV_STG_DB_PASS }}
