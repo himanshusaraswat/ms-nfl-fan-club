@@ -15,7 +15,7 @@ const app = Fastify({
 })
 
 // Register your application as a normal plugin.
-const appService = require('./app.js')
+const appService = require('./dist/app.js')
 app.register(appService)
 
 // delay is the number of milliseconds for the graceful close to finish
