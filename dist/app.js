@@ -10,16 +10,16 @@ exports.options = options;
 const app = async (fastify, opts) => {
     fastify.register(helmet_1.default, { global: true });
     fastify.register(cors_1.default, {
-        origin: ["http://localhost:4200"],
-        methods: ['GET']
+        origin: ["http://localhost:4200", "https://devmeraki.com"],
+        methods: ["GET"],
     });
     void fastify.register(autoload_1.default, {
-        dir: (0, path_1.join)(__dirname, 'plugins'),
-        options: opts
+        dir: (0, path_1.join)(__dirname, "plugins"),
+        options: opts,
     });
     void fastify.register(autoload_1.default, {
-        dir: (0, path_1.join)(__dirname, 'routes'),
-        options: opts
+        dir: (0, path_1.join)(__dirname, "routes"),
+        options: opts,
     });
 };
 exports.app = app;

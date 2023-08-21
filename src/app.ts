@@ -19,7 +19,7 @@ const app: FastifyPluginAsync<AppOptions> = async (
   fastify.register(helmet, { global: true });
   fastify.register(cors, {
     // put your options here
-    origin: ["http://localhost:4200"],
+    origin: ["http://localhost:4200","https://devmeraki.com", "www.devmeraki.com"],
     methods: ["GET"],
   });
 
