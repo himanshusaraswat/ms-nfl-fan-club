@@ -10,7 +10,7 @@ exports.options = options;
 const app = async (fastify, opts) => {
     fastify.register(helmet_1.default, { global: true });
     fastify.register(cors_1.default, {
-        origin: ["http://localhost:4200", "https://devmeraki.com"],
+        origin: ["http://localhost:4200", "https://devmeraki.com", "www.devmeraki.com"],
         methods: ["GET"],
     });
     void fastify.register(autoload_1.default, {
